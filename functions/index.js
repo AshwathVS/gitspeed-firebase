@@ -60,7 +60,7 @@ app.delete("/delete-user", (req, res) => {
     }).catch((error) => functions.logger.error);
   }
 
-  return res.status(200);
+  return res.status(200).send("");
 
 });
 
