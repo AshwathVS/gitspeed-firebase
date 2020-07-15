@@ -28,11 +28,11 @@ const githubUserProfileEndPoint = "https://api.github.com/user";
 
 const getClientId = function() {
   return apiKeys[apiKeys.env].CLIENT_ID;
-}
+};
 
 const getClientSecret = function() {
   return apiKeys[apiKeys.env].CLIENT_SECRET;
-}
+};
 
 // server test
 app.get("/hello", (req, res) => {
@@ -44,6 +44,24 @@ app.get("/oauth", (req, res) => {
   return res
     .status(200)
     .send("Please wait, you will be redirected shortly");
+});
+
+app.delete("/delete-user", (req, res) => {
+  const accessToken = req.body.access_token;
+  const username = req.body.username;
+
+  if(accessToken && username) {
+    db.collection('users').doc(username).get().then((user) => {
+      const token = user.data().access_token;
+      console.log(token);
+        if(token == accessToken) {
+          db.collection('users').doc(username).delete();
+        }
+    }).catch((error) => functions.logger.error);
+  }
+
+  return res.status(200);
+
 });
 
 // fetch user token
