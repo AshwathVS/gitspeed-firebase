@@ -1,65 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.16.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.16.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.16.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.16.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.16.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <title>
+      Gitspeed
+    </title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="gitspeed.png" />
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div style="padding-top: 2%">
+      <div class="container">
+        <div class="row">
+          <div id="title-text" class="col-lg-8 col-md-7 col-sm-6">
+            <img class="logo-size" src="gitspeed.png" alt="Gitspeed logo"><span class="display-3 v-align">itspeed</span>
+            <p class="lead text-danger"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- the chrome extension for programmers</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-info">Instructions</h3>
+          <ul>
+            <li><p class="lead">Install the extension using chrome store.</p></li>
+            <li><p class="lead">Login using github OAuth through the extension.</p></li>
+            <li><p class="lead">Before you start to commit files, you will need to add paths which can be done using the <b>+</b> icon.</p></li>
+            <li><p class="lead">Once that is done, you are good to go. Use to plugin to commit all the programs that you want to keep track of.</p></li>
+            <li><p class="lead">Even though the plugin is aimed towards competitive programmers who miss out on keeping track of the programs that they code at various sites, the plugin can also be used for note taking, saving up interesting code too.</p></li>
+          </ul>
+          <div>
+            <h3 class="text-warning">Note</h3>
+            <ul>
+              <li><p class="lead">Your data is secured using firestore</p></li>
+              <li><p class="lead">If you opt to stop using gitspeed by any chance, make sure to hit the delete data icon so that we delete all your files stored in local storage and the cloud.</p></li>
+            </ul>
+          </div>
+          <div>
+            <p class="lead text-success">Make sure to check out the <a style="color: orangered" href="https://github.com/AshwathVS/gitspeed" target="_blank">repository</a>, give it a star if you liked the plugin!</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+  <div class="text-center" style="padding-top: 7px">
+    With <span><img class="footer-logo" src="heart.png" alt="India"></span> from <span><img class="footer-logo" src="india-logo.png" alt="India"></span>
+  </div>
   </body>
 </html>

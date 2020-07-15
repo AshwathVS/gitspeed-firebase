@@ -1,0 +1,19 @@
+.logo-size {
+    width: 100px;
+    height: 100px;
+}
+
+.logo-size-small {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.v-align {
+    vertical-align: middle;
+}
+
+.footer-logo {
+    width: 25px;
+    height: 25px;
+}

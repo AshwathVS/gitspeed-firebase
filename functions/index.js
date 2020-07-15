@@ -43,7 +43,7 @@ app.get("/hello", (req, res) => {
 app.get("/oauth", (req, res) => {
   return res
     .status(200)
-    .send("Please close this tab and continue from the extension.");
+    .send("Please wait, you will be redirected shortly");
 });
 
 // fetch user token
